@@ -1,69 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lineage2JS</title>
+  <title>Lineage2JS - JavaScript Server Emulator for Lineage 2</title>
+  <meta name="description" content="Complete Lineage 2 Chronicle 1: Harbingers of War server emulator written in JavaScript">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="shortcut icon" href="images/favicon.ico">
   <script src="js/bootstrap.min.js"></script>
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #198754 100%);
+      color: white;
+      padding: 5rem 0;
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+    }
+    .btn-xl {
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .footer {
+      background: #2c3e50 !important;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  </style>
 </head>
 <body>
   <div class="d-flex flex-column vh-100">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="/">
-          <img src="images/logo.png" width="32px" class="me-2">
+        <a class="navbar-brand d-flex align-items-center nav-brand" href="/">
+          <img src="images/logo.png" width="32" height="32" class="me-2" alt="Lineage2JS Logo">
           Lineage2JS
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Docs</a>
+              <a class="nav-link" href="/docs/">Documentation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="/downloads.html">Downloads</a>
             </li>
-          </ul> -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/lineage2js">GitHub</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-    <div class="mt-5 flex-fill">
-      <div>
-        <div class="container">
-          <h1>Lineage 2 server emulator in JavaScript</h1>
-          <h5 class="mt-4">Lineage 2 Chronicle 1: Harbingers of War – server emulator (written in JavaScript)</h5>
-          <div class="mt-4">
-            <a href="/downloads.html" type="button" class="btn btn-primary me-2 pt-2 pb-2 pe-4 ps-4">Downloads</a>
-            <a href="/docs/guide/get-started/" type="button" class="btn btn-success pt-2 pb-2 pe-4 ps-4">Get started</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer p-5 bg-secondary text-white">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <b>Resources</b>
-            <div>
-              <!-- <a class="d-block text-white" href="#">Docs</a> -->
-              <a class="d-block text-white" href="https://github.com/lineage2js">Source Code</a>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">Lineage2JS</h1>
+            <h2 class="h3 mb-4">JavaScript Server Emulator for Lineage 2 Chronicle 1</h2>
+            <p class="lead mb-5">Complete toolkit and applications for Lineage 2 Chronicle 1: Harbingers of War private servers. Built with modern JavaScript technology.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="/downloads.html" class="btn btn-light btn-xl fw-bold">📥 Download Now</a>
+              <a href="/docs/guide/get-started/" class="btn btn-outline-light btn-xl">🚀 Get Started</a>
             </div>
           </div>
+          <div class="col-lg-6 text-center">
+            <img src="https://raw.githubusercontent.com/lineage2js/.github/main/profile/images/main.png" alt="Lineage2JS Server Emulator" class="img-fluid rounded shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row text-center mb-5">
           <div class="col">
-            <b>Community</b>
-            <div>
-              <a class="d-block text-white" href="https://www.youtube.com/@lineage2js">Youtube</a>
-              <a class="d-block text-white" href="https://t.me/lineage2js">Telegram</a>
+            <h2 class="h1 mb-3">Why Choose Lineage2JS?</h2>
+            <p class="lead text-muted">Experimental server with advanced customization capabilities</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="text-center p-4">
+              <div class="feature-icon bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center">
+                🤖
+              </div>
+              <h4>AI Bots System</h4>
+              <p class="text-muted">Advanced bot support for testing and solo gameplay. Customize bot behavior, difficulty, and interactions.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center p-4">
+              <div class="feature-icon bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center">
+                🎮
+              </div>
+              <h4>Custom Game Modes</h4>
+              <p class="text-muted">Create and modify game modes like Deathmatch, Team Battle, and other custom scenarios with easy configuration.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="text-center p-4">
+              <div class="feature-icon bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center">
+                ⚡
+              </div>
+              <h4>Easy Setup &amp; Run</h4>
+              <p class="text-muted">Quick installation and launch process. Perfect for developers and enthusiasts who want to experiment quickly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6">
+            <div class="text-center p-4">
+              <div class="feature-icon bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center">
+                🔬
+              </div>
+              <h4>Experimental Features</h4>
+              <p class="text-muted">Cutting-edge server capabilities with regular updates. Test new ideas and contribute to development.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="text-center p-4">
+              <div class="feature-icon bg-danger text-white rounded-circle d-inline-flex align-items-center justify-content-center">
+                🛠️
+              </div>
+              <h4>Modding Platform</h4>
+              <p class="text-muted">Extensive modding support. Create custom content, modify gameplay mechanics, and share your creations.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="mt-5 text-center">Copyright © 2025 Lineage2JS. All rights reserved.</div>
-    </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-light py-5">
+      <div class="container text-center">
+        <h2 class="h1 mb-4">Ready to Experiment?</h2>
+        <p class="lead mb-4">Join our community of developers and enthusiasts creating the next generation of Lineage 2 server features</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/downloads.html" class="btn btn-primary btn-lg">🚀 Download &amp; Test Now</a>
+          <a href="/docs/guide/get-started/" class="btn btn-success btn-lg">📖 Quick Start Guide</a>
+          <a href="https://github.com/lineage2js" class="btn btn-outline-dark btn-lg">💡 Contribute on GitHub</a>
+        </div>
+        <div class="mt-4">
+          <p class="text-muted">
+            <small>Perfect for: Developers • Server Owners • Modders • Enthusiasts</small>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">
+              <img src="images/logo.png" width="24" height="24" class="me-2" alt="">
+              Lineage2JS
+            </h5>
+            <p class="text-light">Modern JavaScript server emulator for Lineage 2 Chronicle 1: Harbingers of War.</p>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="fw-bold">Resources</h6>
+            <ul class="list-unstyled">
+              <li><a class="text-white text-decoration-none" href="/docs/">Documentation</a></li>
+              <li><a class="text-white text-decoration-none" href="/downloads.html">Downloads</a></li>
+              <li><a class="text-white text-decoration-none" href="https://github.com/lineage2js">Source Code</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="fw-bold">Community</h6>
+            <ul class="list-unstyled">
+              <li><a class="text-white text-decoration-none" href="https://www.youtube.com/@lineage2js">YouTube</a></li>
+              <li><a class="text-white text-decoration-none" href="https://t.me/lineage2js">Telegram</a></li>
+              <li><a class="text-white text-decoration-none" href="https://github.com/lineage2js">GitHub</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h6 class="fw-bold">About Lineage2JS</h6>
+            <p class="text-light small">Open-source project dedicated to preserving and enhancing the Lineage 2 Chronicle 1 experience through modern web technologies.</p>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-top border-secondary text-center">
+          <p class="text-light mb-0">Copyright © 2025 Lineage2JS. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
