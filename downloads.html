@@ -63,6 +63,80 @@
       font-size: 0.75rem;
       margin-left: 8px;
     }
+    .category-section {
+      margin-bottom: 3rem;
+    }
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e9ecef;
+    }
+    .download-item {
+      background: #fff;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      transition: all 0.2s ease;
+    }
+    .download-item:hover {
+      border-color: #0d6efd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .download-header {
+      display: flex;
+      justify-content: between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+    .download-info {
+      flex: 1;
+    }
+    .download-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #2c3e50;
+    }
+    .download-desc {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 0.5rem;
+    }
+    .download-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: #6c757d;
+    }
+    .download-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .btn-download {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    .btn-download-sm {
+      padding: 0.375rem 0.75rem;
+      font-size: 0.8rem;
+    }
+    .badge-platform {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.5rem;
+      background: #f8f9fa;
+      color: #6c757d;
+      border: 1px solid #dee2e6;
+    }
   </style>
 </head>
 <body>
@@ -96,8 +170,8 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-8">
-            <h1 class="display-4 fw-bold">Download Lineage2JS</h1>
-            <p class="lead">Get everything you need to set up your own Lineage 2 server environment.</p>
+            <h1 class="display-4 fw-bold">Downloads</h1>
+            <p class="lead">Everything you need to set up your Lineage 2 server.</p>
           </div>
           <div class="col-lg-4 text-center">
             <div class="download-icon mx-auto bg-white text-primary">
@@ -143,178 +217,140 @@
 
       <h2 class="mb-4">Downloads</h2>
       
-      <div class="row">
-        <div class="col-12">
-          <!-- Database Card -->
-          <div class="card download-card mb-4">
-            <div class="card-body">
-              <div class="d-flex">
-                <div class="download-icon text-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-database-fill" viewBox="0 0 16 16">
-                    <path d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223"/>
-                    <path d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
-                    <path d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
-                    <path d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972"/>
-                  </svg>
-                </div>
-                <div class="flex-grow-1">
-                  <h5 class="card-title">PostgreSQL</h5>
-                  <p class="card-text">Database management system required to run the server.</p>
-                  <div class="file-info mb-2">
-                    <span class="me-3"><strong>Size:</strong> ~350 MB</span>
-                    <span class="me-3"><strong>Version:</strong> 17.5</span>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mt-4">
-                    <a href="https://drive.google.com/file/d/16b7MG27I7DVh2nuk-Zc6rrbMIh_1RqMh/view" target="_blank" class="btn btn-primary download-btn d-flex align-items-center justify-content-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Google Drive (Windows)
-                    </a>
-                    <a href="https://sbp.enterprisedb.com/getfile.jsp?fileid=1259601" target="_blank" class="btn btn-outline-primary download-btn d-flex align-items-center justify-content-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Official Website
-                    </a>
-                  </div>
-                </div>
+      <!-- Database Setup -->
+      <div class="category-section">
+        <h3 class="category-title">Database Setup</h3>
+        
+        <div class="download-item">
+          <div class="download-header">
+            <div class="download-info">
+              <div class="download-title">PostgreSQL 17.5</div>
+              <div class="download-desc">Database management system required for the server</div>
+              <div class="download-meta">
+                <span><strong>Size:</strong> ~350 MB</span>
+                <span><strong>Version:</strong> 17.5</span>
               </div>
             </div>
-          </div>
-
-          <!-- Database Schema -->
-          <div class="card download-card mb-4">
-            <div class="card-body">
-              <div class="d-flex">
-                <div class="download-icon text-success">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-filetype-sql" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM0 14.841a1.13 1.13 0 0 0 .401.823q.194.162.478.252c.284.09.411.091.665.091q.507 0 .858-.158.355-.159.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.187-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.776.15-.337.149-.528.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.325q0 .165-.085.29A.56.56 0 0 1 2 15.31q-.167.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zm6.878 1.489-.507-.739q.264-.243.401-.6.138-.358.138-.806v-.501q0-.556-.208-.967a1.5 1.5 0 0 0-.589-.636q-.383-.225-.917-.225-.527 0-.914.225-.384.223-.592.636a2.14 2.14 0 0 0-.205.967v.5q0 .554.205.965.208.41.592.636a1.8 1.8 0 0 0 .914.222 1.8 1.8 0 0 0 .6-.1l.294.422h.788ZM4.262 14.2v-.522q0-.369.114-.63a.9.9 0 0 1 .325-.398.9.9 0 0 1 .495-.138q.288 0 .495.138a.9.9 0 0 1 .325.398q.115.261.115.63v.522q0 .246-.053.445-.053.196-.155.34l-.106-.14-.105-.147h-.733l.451.65a.6.6 0 0 1-.251.047.87.87 0 0 1-.487-.147.9.9 0 0 1-.32-.404 1.7 1.7 0 0 1-.11-.644m3.986 1.057h1.696v.674H7.457v-3.999h.79z"/>
-                  </svg>
-                </div>
-                <div class="flex-grow-1">
-                  <h5 class="card-title">l2db.sql</h5>
-                  <p class="card-text">Database schema with initial data for Lineage 2 server.</p>
-                  <div class="file-info mb-2">
-                    <span class="me-3"><strong>Size:</strong> ~15 MB</span>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mt-4">
-                    <a href="https://drive.google.com/file/d/1zGPxmfpg5iV5JtiiPwQYbStM77EuFBMp/view" target="_blank" class="btn btn-success download-btn d-flex align-items-center justify-content-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Google Drive
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="download-actions">
+              <a href="https://drive.google.com/file/d/16b7MG27I7DVh2nuk-Zc6rrbMIh_1RqMh/view" 
+                 class="btn-download btn btn-primary" target="_blank">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg>
+                Windows
+              </a>
+              <a href="https://sbp.enterprisedb.com/getfile.jsp?fileid=1259601" 
+                 class="btn-download btn btn-outline-secondary" target="_blank">
+                Official Site
+              </a>
             </div>
           </div>
+        </div>
 
-          <!-- Login Server -->
-          <div class="card download-card mb-4">
-            <div class="card-body">
-              <div class="d-flex">
-                <div class="download-icon text-info">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-hdd-stack-fill" viewBox="0 0 16 16">
-                    <path d="M2 9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1"/>
-                  </svg>
-                </div>
-                <div class="flex-grow-1">
-                  <h5 class="card-title">Login Server</h5>
-                  <p class="card-text">Authentication server for player login and account management.</p>
-                  <div class="file-info mb-2">
-                    <span class="me-3"><strong>Size:</strong> ~25 MB</span>
-                    <span class="me-3"><strong>Version:</strong> 0.0.0</span>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mt-4">
-                    <a href="https://drive.google.com/file/d/1JEox20_Si6Izg9128F4rnO46A66Gqgwr/view" target="_blank" class="btn btn-info text-white download-btn d-flex align-items-center justify-content-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Google Drive (Windows)
-                    </a>
-                    <button class="btn btn-outline-info download-btn d-flex align-items-center justify-content-center" disabled>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Linux (Coming Soon)
-                    </button>
-                  </div>
-                </div>
+        <div class="download-item">
+          <div class="download-header">
+            <div class="download-info">
+              <div class="download-title">l2db.sql</div>
+              <div class="download-desc">Database schema with initial game data</div>
+              <div class="download-meta">
+                <span><strong>Size:</strong> ~15 MB</span>
               </div>
             </div>
-          </div>
-
-          <!-- Game Server -->
-          <div class="card download-card mb-4">
-            <div class="card-body">
-              <div class="d-flex">
-                <div class="download-icon text-warning">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-hdd-stack-fill" viewBox="0 0 16 16">
-                    <path d="M2 9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M2 2a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1"/>
-                  </svg>
-                </div>
-                <div class="flex-grow-1">
-                  <h5 class="card-title">Game Server</h5>
-                  <p class="card-text">Main game server handling world simulation and gameplay.</p>
-                  <div class="file-info mb-2">
-                    <span class="me-3"><strong>Size:</strong> ~45 MB</span>
-                    <span class="me-3"><strong>Version:</strong> 0.0.0</span>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mt-4">
-                    <a href="https://drive.google.com/file/d/1_rWmiPCXUTrpEG18ONmA_HvsQGA1bWL5/view" target="_blank" class="btn btn-warning text-white download-btn d-flex align-items-center justify-content-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Google Drive (Windows)
-                    </a>
-                    <button class="btn btn-outline-warning download-btn d-flex align-items-center justify-content-center" disabled>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Linux (Coming Soon)
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <div class="download-actions">
+              <a href="https://drive.google.com/file/d/1zGPxmfpg5iV5JtiiPwQYbStM77EuFBMp/view" 
+                 class="btn-download btn btn-success" target="_blank">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg>
+                Download
+              </a>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Game Client -->
-          <div class="card download-card mb-4">
-            <div class="card-body">
-              <div class="d-flex">
-                <div class="download-icon text-danger">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16">
-                    <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z"/>
-                    <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27"/>
-                  </svg>
-                </div>
-                <div class="flex-grow-1">
-                  <h5 class="card-title">Lineage 2 Chronicle 1 Client (Windows)</h5>
-                  <p class="card-text">Game client to connect and play on your server.</p>
-                  <div class="file-info mb-2">
-                    <span class="me-3"><strong>Size:</strong> ~1.2 GB</span>
-                  </div>
-                  <div class="d-flex flex-wrap gap-2 mt-4">
-                    <a href="https://drive.google.com/file/d/1Yu0Qx5KrfvCCVrc8PpS5dbcJ5AEVEjRZ/view" target="_blank" class="btn btn-danger download-btn d-flex align-items-center justify-content-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-2" viewBox="0 0 16 16">
-                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                      </svg>
-                      Google Drive
-                    </a>
-                  </div>
-                </div>
+      <!-- Server Files -->
+      <div class="category-section">
+        <h3 class="category-title">Server Files</h3>
+        
+        <div class="download-item">
+          <div class="download-header">
+            <div class="download-info">
+              <div class="download-title">Login Server</div>
+              <div class="download-desc">Authentication server for player login and account management</div>
+              <div class="download-meta">
+                <span><strong>Size:</strong> ~25 MB</span>
+                <span><strong>Version:</strong> 0.0.0</span>
               </div>
+            </div>
+            <div class="download-actions">
+              <a href="https://drive.google.com/file/d/1JEox20_Si6Izg9128F4rnO46A66Gqgwr/view" 
+                 class="btn-download btn btn-info text-white" target="_blank">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg>
+                Windows
+              </a>
+              <button class="btn-download btn btn-outline-secondary" disabled>
+                Linux (Soon)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="download-item">
+          <div class="download-header">
+            <div class="download-info">
+              <div class="download-title">Game Server</div>
+              <div class="download-desc">Main server handling world simulation and gameplay</div>
+              <div class="download-meta">
+                <span><strong>Size:</strong> ~45 MB</span>
+                <span><strong>Version:</strong> 0.0.0</span>
+              </div>
+            </div>
+            <div class="download-actions">
+              <a href="https://drive.google.com/file/d/1_rWmiPCXUTrpEG18ONmA_HvsQGA1bWL5/view" 
+                 class="btn-download btn btn-warning text-dark" target="_blank">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg>
+                Windows
+              </a>
+              <button class="btn-download btn btn-outline-secondary" disabled>
+                Linux (Soon)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Client -->
+      <div class="category-section">
+        <h3 class="category-title">Game Client</h3>
+        
+        <div class="download-item">
+          <div class="download-header">
+            <div class="download-info">
+              <div class="download-title">Lineage 2 Chronicle 1 Client</div>
+              <div class="download-desc">Game client to connect and play on your server</div>
+              <div class="download-meta">
+                <span><strong>Size:</strong> ~1.2 GB</span>
+                <span class="badge-platform">Windows</span>
+              </div>
+            </div>
+            <div class="download-actions">
+              <a href="https://drive.google.com/file/d/1Yu0Qx5KrfvCCVrc8PpS5dbcJ5AEVEjRZ/view" 
+                 class="btn-download btn btn-danger" target="_blank">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                </svg>
+                Download Client
+              </a>
             </div>
           </div>
         </div>
