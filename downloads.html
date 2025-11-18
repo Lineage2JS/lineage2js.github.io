@@ -100,6 +100,52 @@
     .footer {
       background: #2c3e50 !important;
     }
+    .code-block {
+      background: #1a1a1a;
+      color: #00ff00;
+      padding: 1rem;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+      position: relative;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #fff;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .linux-options {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .option-tabs {
+      border-bottom: 1px solid #dee2e6;
+      margin-bottom: 1rem;
+    }
+    .option-tab {
+      padding: 0.5rem 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #6c757d;
+    }
+    .option-tab.active {
+      color: #0d6efd;
+      border-bottom: 2px solid #0d6efd;
+    }
   </style>
 </head>
 <body>
@@ -219,6 +265,80 @@
               </svg>
               Download
             </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database Scripts -->
+      <div class="category-section">
+        <h3 class="category-title">Database Scripts</h3>
+        
+        <!-- Windows Script -->
+        <div class="download-item">
+          <div>
+            <div class="download-title">init_db.bat</div>
+            <div class="download-desc">Windows batch script for initializing the database</div>
+            <div class="download-meta">
+              <span><strong>Size:</strong> ~1 KB</span>
+              <span><strong>Platform:</strong> Windows</span>
+            </div>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="btn-download btn btn-primary" target="_blank">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+              </svg>
+              Download Script
+            </a>
+          </div>
+        </div>
+
+        <!-- Linux Script -->
+        <div class="download-item">
+          <div>
+            <div class="download-title">init_db.sh</div>
+            <div class="download-desc">Linux shell script for initializing the database</div>
+            <div class="download-meta">
+              <span><strong>Size:</strong> ~1 KB</span>
+              <span><strong>Platform:</strong> Linux</span>
+            </div>
+          </div>
+          
+          <div class="linux-options">
+            <div class="option-tabs">
+              <button class="option-tab active" onclick="showOption('download')">Download</button>
+              <button class="option-tab" onclick="showOption('wget')">wget Command</button>
+              <button class="option-tab" onclick="showOption('curl')">curl Command</button>
+            </div>
+            
+            <div id="download-option" class="option-content">
+              <div class="d-flex gap-2">
+                <a href="#" class="btn-download btn btn-success" target="_blank">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                  </svg>
+                  Download Script
+                </a>
+              </div>
+            </div>
+            
+            <div id="wget-option" class="option-content" style="display: none;">
+              <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                wget https://files.lineage2js.com/scripts/init_db.sh && chmod +x init_db.sh
+              </div>
+              <small class="text-muted">Run this command in your terminal to download and make the script executable</small>
+            </div>
+            
+            <div id="curl-option" class="option-content" style="display: none;">
+              <div class="code-block">
+                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                curl -O https://files.lineage2js.com/scripts/init_db.sh && chmod +x init_db.sh
+              </div>
+              <small class="text-muted">Run this command in your terminal to download and make the script executable</small>
+            </div>
           </div>
         </div>
       </div>
@@ -356,5 +476,41 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    function showOption(option) {
+      // Hide all option contents
+      document.querySelectorAll('.option-content').forEach(el => {
+        el.style.display = 'none';
+      });
+      
+      // Remove active class from all tabs
+      document.querySelectorAll('.option-tab').forEach(el => {
+        el.classList.remove('active');
+      });
+      
+      // Show selected option and activate tab
+      document.getElementById(option + '-option').style.display = 'block';
+      event.target.classList.add('active');
+    }
+
+    function copyCode(button) {
+      const codeBlock = button.parentElement;
+      const text = codeBlock.textContent.replace('Copy', '').trim();
+      
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = button.textContent;
+        button.textContent = 'Copied!';
+        setTimeout(() => {
+          button.textContent = originalText;
+        }, 2000);
+      });
+    }
+
+    // Initialize with download option visible
+    document.addEventListener('DOMContentLoaded', function() {
+      showOption('download');
+    });
+  </script>
 </body>
 </html>
