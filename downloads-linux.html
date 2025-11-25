@@ -199,8 +199,8 @@
           </div>
           
           <div class="position-relative mt-4">
-            <pre class="bg-dark text-light p-3 rounded mb-0"><code>curl https://lineage2js.github.io/scripts/install.sh | bash</code></pre>
-            <button class="btn btn-sm btn-outline-light position-absolute top-50 end-0 me-3 translate-middle-y" onclick="copyCode(this)">
+            <pre class="bg-dark text-light p-3 rounded mb-0"><code id="install-script">curl https://lineage2js.github.io/scripts/install.sh | bash</code></pre>
+            <button class="btn btn-sm btn-outline-light position-absolute top-50 end-0 me-3 translate-middle-y" onclick="copyCode()">
               <i class="bi bi-clipboard me-1"></i>Copy
             </button>
           </div>
@@ -246,5 +246,29 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    function copyCode(button) {
+        const codeElement = document.querySelector('#install-script');
+        const codeText = codeElement.textContent || codeElement.innerText;
+        
+        navigator.clipboard.writeText(codeText).then(() => {
+            // save origin icon in button
+            const originalHtml = button.innerHTML;
+            
+            // repalce text/icon
+            button.innerHTML = '<i class="bi bi-check2 me-1"></i>Copied!';
+            button.classList.remove('btn-outline-light');
+            button.classList.add('btn-success');
+            
+            // restore text/icon
+            setTimeout(() => {
+                button.innerHTML = originalHtml;
+                button.classList.remove('btn-success');
+                button.classList.add('btn-outline-light');
+            }, 2000);
+        })
+    }
+  </script>
 </body>
 </html>
